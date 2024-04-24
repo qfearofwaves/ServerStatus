@@ -26,6 +26,8 @@ Press CTRL+C to quit
 ```
 # Usage
 client = StatusClient("http://127.0.0.1:5000")
+
+In real world, we replace `http://127.0.0.1:5000` with the server url. Client might include API key in the request in order to call the server.
 ```
 
 The client library implemented a naive approach to wrap the errors. A more advanced approach would be calling the server with retry. For example, with a fixed backoff of 500ms and retry for maximum of 3 times; or with an exponential backoff. I'm more familiar with Java and have used `spring retry`. I did some reserch and for Python there's a library called `Tenacity` can be used. 
